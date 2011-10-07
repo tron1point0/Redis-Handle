@@ -1,10 +1,12 @@
+package Redis::Handle;
 use strict;
 use warnings;
-package Redis::Handle;
-
 use Carp;
 use Redis;
 use AnyEvent::Redis;
+
+# VERSION
+# ABSTRACT: Tie::Handle interface for Redis queues
 
 # use Data::Dump qw(pp);
 
