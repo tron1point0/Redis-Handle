@@ -21,6 +21,7 @@ Features
 *   Pop elements off the queue one-at-a-time
 *   Push elements to the queue
 *   Flush the whole queue into an array
+*   Now on [CPAN](http://search.cpan.org/~tron/Redis-Handle-0.1.1/lib/Redis/Handle.pm)!
 
 How do I use it?
 ----------------
