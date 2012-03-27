@@ -48,16 +48,20 @@ Ties the filehandle to the clientId in Redis.
 =head3 Usage
 
     tie *CLIENT, "Redis::Handle", $clientId;
-
+    
     tie *CLIENT, 'Redis::Handle', $clientId,
         timeout => 100,
         host => 'example.com',
         port => 5800;
+    
+    # pass an existing Redis connection
+    tie *CLIENT, 'Redis::Handle', $clientId, $redis;
 
 =cut
 
     sub TIEHANDLE {
         my ($class,$clientId) = (+shift,+shift);
+        $redis = shift if ref $_[0];
         %redis = @_;
         $redis ||= Redis->new(%redis);
 
