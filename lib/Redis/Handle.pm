@@ -14,7 +14,7 @@ use AnyEvent::Redis;
 
 Redis::Handle - A filehandle tie for a Redis queue
 
-=head1 SYNOPSYS
+=head1 SYNOPSIS
 
     tie *REDIS, 'Redis::Handle';
     print REDIS "Foo bar baz\n";
