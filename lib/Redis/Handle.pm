@@ -178,7 +178,7 @@ number of messages to return, and a callback as its arguments.
 
     sub get {
         my ($self,$clientId) = (+shift,+shift);
-        my $output = tie local *CLIENT, 'Redis::MessageQueue', "$clientId:out";
+        my $output = tie local *CLIENT, 'Redis::Handle', "$clientId:out";
         $output->poll_once(sub {
             $self->write(+shift);
             $self->finish;
@@ -211,3 +211,4 @@ Cleanup code so that we don't end up with a bunch of open filehandles.
 
 }
 1;
+
