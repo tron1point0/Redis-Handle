@@ -21,7 +21,7 @@ Redis::Handle - A filehandle tie for a Redis queue
     print while <REDIS>;        # Prints "Foo bar baz\n"
     
     print REDIS "Foo", "Bar";
-    my @baz = <REDIS>           # @baz is now ("Foo","Bar")
+    my @baz = <REDIS>;          # @baz is now ("Foo","Bar")
     
     print REDIS "Foo", "Bar";
     print <REDIS>;              # Prints "Foo"
